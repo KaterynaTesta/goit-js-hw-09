@@ -45,6 +45,7 @@ function onClick() {
     if (currentDate < selectedDate) {
       countDown = convertMs(selectedDate - currentDate);
       showCountDown(countDown);
+      startBtn.disabled = true;
     } else {
       clearInterval(timerId);
       Notify.success('Time is up');
